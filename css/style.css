@@ -236,6 +236,7 @@ h1, h2, h3 {
 
 /* Menu */
 .menu { padding: 100px 0; background: var(--cream-dark); }
+.menu-page { padding-top: 150px; }
 .menu h2 { font-size: 2.4rem; }
 .menu-grid {
   display: grid;
@@ -340,29 +341,6 @@ h1, h2, h3 {
   margin-top: 32px;
 }
 
-/* Gallery */
-.gallery { padding: 100px 0; }
-.gallery h2 { font-size: 2.2rem; margin-bottom: 40px; }
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 160px 160px;
-  gap: 16px;
-}
-.gallery-tile {
-  border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.6rem;
-  color: #fff;
-}
-.tile-a { grid-column: span 2; grid-row: span 2; background: linear-gradient(135deg, var(--pink), var(--pink-dark)); }
-.tile-b { grid-column: span 2; background: linear-gradient(135deg, var(--gold), #c98a1f); }
-.tile-c { background: var(--charcoal); }
-.tile-d { background: linear-gradient(135deg, #7a9c6c, #4f6b45); }
-.tile-e { grid-column: span 2; background: linear-gradient(135deg, var(--brown), #4a3221); }
-
 /* Spread the love */
 .spread-love {
   padding: 90px 0;
@@ -399,38 +377,6 @@ h1, h2, h3 {
   color: var(--brown);
 }
 .hours-list li:last-child { border-bottom: none; }
-
-/* CTA */
-.cta {
-  padding: 100px 0;
-  background: linear-gradient(135deg, var(--pink), var(--pink-dark));
-  color: #fff;
-  text-align: center;
-}
-.cta h2 { color: #fff; font-size: 2.4rem; margin-bottom: 12px; }
-.cta p { color: rgba(253, 246, 236, 0.85); margin-bottom: 32px; }
-.order-form {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  max-width: 480px;
-  margin: 0 auto;
-}
-.order-form input {
-  flex: 1;
-  min-width: 200px;
-  padding: 14px 20px;
-  border-radius: 999px;
-  border: none;
-  font-size: 1rem;
-  font-family: var(--font-body);
-}
-.form-note {
-  margin-top: 16px;
-  font-weight: 700;
-  min-height: 24px;
-}
 
 /* Footer */
 .site-footer {
@@ -483,8 +429,6 @@ h1, h2, h3 {
   .nav-links li:last-child { border-bottom: none; padding-top: 16px; }
   .hero { padding: 90px 0 60px; }
   .hero-stats { gap: 28px; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 140px); }
-  .tile-a, .tile-e { grid-column: span 2; }
   .footer-grid { grid-template-columns: 1fr; }
   .menu-tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
   .tab-btn { flex-shrink: 0; }
