@@ -130,7 +130,7 @@ h1, h2, h3 {
 .logo {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -144,14 +144,7 @@ h1, h2, h3 {
   object-fit: cover;
   flex-shrink: 0;
 }
-.logo-text small {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
-  color: inherit;
-  opacity: 0.75;
-}
+.logo-text { white-space: nowrap; }
 .nav-links {
   list-style: none;
   display: flex;
