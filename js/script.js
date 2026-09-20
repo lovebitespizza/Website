@@ -1,5 +1,15 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const siteHeader = document.querySelector('.site-header');
+function setHeaderHeight() {
+  document.documentElement.style.setProperty('--header-h', `${siteHeader.getBoundingClientRect().height}px`);
+}
+setHeaderHeight();
+window.addEventListener('resize', setHeaderHeight);
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(setHeaderHeight);
+}
+
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
