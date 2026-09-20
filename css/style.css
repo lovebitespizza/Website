@@ -13,7 +13,6 @@
   --radius: 16px;
   --shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.65);
   --header-h: 77px;
-  --vh100: 100vh;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -177,7 +176,8 @@ h1, h2, h3 {
 /* Hero */
 .hero {
   position: relative;
-  min-height: calc(var(--vh100) - var(--header-h));
+  min-height: calc(100vh - var(--header-h));
+  min-height: calc(100svh - var(--header-h));
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -247,7 +247,8 @@ h1, h2, h3 {
 
 /* About */
 .about {
-  min-height: var(--vh100);
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   padding: 60px 0;
