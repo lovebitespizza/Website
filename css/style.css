@@ -174,7 +174,9 @@ h1, h2, h3 {
 /* Hero */
 .hero {
   position: relative;
-  padding: 120px 0 90px;
+  min-height: calc(100vh - 78px);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 .hero-bg {
@@ -186,7 +188,16 @@ h1, h2, h3 {
     linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
   z-index: -1;
 }
-.hero-content { max-width: 720px; }
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 720px;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .hero h1 {
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   font-weight: 600;
@@ -384,7 +395,7 @@ h1, h2, h3 {
 .footer-cta p { font-family: var(--font-display); font-size: 1.2rem; color: var(--text); }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 32px;
   padding-bottom: 40px;
   border-bottom: 1px solid var(--border);
@@ -426,7 +437,7 @@ h1, h2, h3 {
   .nav-links.open { display: flex; }
   .nav-links li { width: 100%; padding: 12px 0; border-bottom: 1px solid var(--border); }
   .nav-links li:last-child { border-bottom: none; padding-top: 16px; }
-  .hero { padding: 90px 0 60px; }
+  .hero-content { padding-top: 40px; padding-bottom: 40px; }
   .footer-grid { grid-template-columns: 1fr; }
   .menu-tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
   .tab-btn { flex-shrink: 0; }
