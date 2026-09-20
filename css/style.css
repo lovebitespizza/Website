@@ -212,6 +212,21 @@ h1, h2, h3 {
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
+/* Compact the hero on short viewports (phones with browser chrome eating
+   into the visible height) so the content + strip actually fit without
+   the strip getting pushed below the fold. */
+@media (max-height: 700px) {
+  .hero-content { padding-top: 40px; padding-bottom: 24px; }
+  .eyebrow { margin-bottom: 8px; }
+  .eyebrow-sub { margin-bottom: 4px; }
+  .hero h1 { margin-bottom: 12px; }
+  .hero-sub { margin-bottom: 20px; }
+}
+@media (max-height: 600px) {
+  .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero-sub { font-size: 1rem; }
+}
+
 /* Strip */
 .strip {
   background: var(--surface);
