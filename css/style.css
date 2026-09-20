@@ -174,7 +174,7 @@ h1, h2, h3 {
 /* Hero */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 77px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
