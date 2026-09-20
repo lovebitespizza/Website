@@ -1,13 +1,19 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const siteHeader = document.querySelector('.site-header');
-function setHeaderHeight() {
+function setViewportVars() {
+  const vh = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  document.documentElement.style.setProperty('--vh100', `${vh}px`);
   document.documentElement.style.setProperty('--header-h', `${siteHeader.getBoundingClientRect().height}px`);
 }
-setHeaderHeight();
-window.addEventListener('resize', setHeaderHeight);
+setViewportVars();
+window.addEventListener('resize', setViewportVars);
+window.addEventListener('orientationchange', setViewportVars);
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', setViewportVars);
+}
 if (document.fonts && document.fonts.ready) {
-  document.fonts.ready.then(setHeaderHeight);
+  document.fonts.ready.then(setViewportVars);
 }
 
 const navToggle = document.getElementById('navToggle');
